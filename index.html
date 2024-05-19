@@ -7,19 +7,24 @@
     <title>To Do App</title>
 </head>
 <body>
-    <div class="app">
-        <div class="container">
-            <div id="wrapper">
-                <input type="text" placeholder="Task to be done.."/>
-                <button id = "add-btn">Add</button>
+    <div class = "Gcontainer">
+        <div class="app">
+            <div class="container">
+                <div id="wrapper">
+                    <input type="text" placeholder="Task to be done.."/>
+                    <button id = "add-btn">Add</button>
+                </div>
+                <div id="tasks">
+                    <p id="pending-tasks">
+                        You have <span class="count-value">0</span>task(s) to complete.
+                    </p>
+                </div>
             </div>
-            <div id="tasks">
-                <p id="pending-tasks">
-                    You have <span class="count-value">0</span>task(s) to complete.
-                </p>
-            </div>
+            <p id="error">Input cannot be empty.</p>
         </div>
-        <p id="error">Input cannot be empty.</p>
+        <div = "stopWatch">
+            <p>The clock</p>
+        </div>
     </div>
     
 </body>
