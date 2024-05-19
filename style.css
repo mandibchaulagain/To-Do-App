@@ -43,12 +43,12 @@ body{
 }
 #wrapper input{
     width: 100%;
-    background-color: transparent;
+    /* background-color: transparent; */
     color: #111111;
     font-size: 0.9em;
-    border: none;
-    border-bottom: 2px solid #d1d3d4;
     padding: 1em 0.5em;
+    border-radius: 0.5em;
+    border-color: rgb(218, 218, 218);
 }
 #wrapper input:focus{
     outline: none;
