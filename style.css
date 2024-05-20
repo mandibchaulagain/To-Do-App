@@ -1,27 +1,41 @@
 *,
 *:before,
-*:after{
+*:after {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     height: 100vh;
-    background: linear-gradient(
-        135deg,
-        #8052ec,
-        #d161ff
-    );
+    background: linear-gradient(135deg, #8052ec, #d161ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.container{
+
+.Rcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5em; /* Adjust the gap between container and stopwatch as needed */
+}
+
+.container {
     width: 40%;
     min-width: 450px;
-    position: absolute;
-    margin: auto;
-    left: 0;
-    right: 0;
-    top: 30px;
     padding: 30px 40px;
+    border-radius: 5px;
+    text-align: center;
+}
+.stopWatch{
+    width: 40%;
+    min-width: 450px;
+    padding: 30px 40px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
 }
 #newtask{
     position: relative;
