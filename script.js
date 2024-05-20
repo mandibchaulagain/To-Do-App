@@ -1,8 +1,10 @@
 document.querySelector('#push').onclick = function(){
+    
     if(document.querySelector('#newtask input').value.length == 0){
         alert("Please Enter a Task")
     }
     else{
+        document.getElementById("tasks").style.display = "block";
         document.querySelector('#tasks').innerHTML += `
             <div class="task">
                 <span id="taskname">
@@ -18,6 +20,7 @@ document.querySelector('#push').onclick = function(){
         for(var i=0; i<current_tasks.length; i++){
             current_tasks[i].onclick = function(){
                 this.parentNode.remove();
+                checkVisibility();
             }
         }
 
@@ -29,5 +32,12 @@ document.querySelector('#push').onclick = function(){
         }
 
         document.querySelector("#newtask input").value = "";
+    }
+}
+
+function checkVisibility(){
+    var tasks = document.querySelectorAll(".task");
+    if (tasks.length == 0) {
+        document.getElementById("tasks").style.display = "none";
     }
 }
