@@ -8,111 +8,138 @@
 
 body {
     height: 100vh;
-    background: linear-gradient(135deg, #8052ec, #d161ff);
+    background: linear-gradient(135deg, #C7E9FB, #86A8E7);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* Main Container */
 .Rcontainer {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2.5em; /* Adjust the gap between container and stopwatch as needed */
+    height: 100vh;
 }
 
+/* To-Do Container */
 .container {
-    width: 40%;
-    min-width: 450px;
-    padding: 30px 40px;
-    border-radius: 5px;
-    text-align: center;
-}
-.stopWatch{
-    width: 40%;
-    min-width: 450px;
-    padding: 30px 40px;
-    background-color: #ffffff;
-    border-radius: 5px;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-    text-align: center;
-}
-#newtask{
-    position: relative;
-    background-color: #ffffff;
-    padding: 30px 20px;
-    border-radius: 5px;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
-}
-#newtask input{
-    width: 70%;
-    width: 70%;
-    height: 45px;
-    font-family: 'Poppins',sans-serif;
-    font-size: 15px;
-    border: 2px solid #d1d3d4;
-    padding: 12px;
-    color: #111111;
-    font-weight: 500;
-    position: relative;
-    border-radius: 5px;
-}
-#newtask input:focus{
-    outline: none;
-    border-color: #8052ec;
+    background: #FFFFFF;
+    width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
-#newtask button{
-    position: relative;
-    float: right;
-    width: 20%;
-    height: 45px;
+#newtask {
+    display: flex;
+    padding: 20px;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+#newtask input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #C7C7C7;
     border-radius: 5px;
-    font-family: 'Poppins',sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    background-color: #8052ec;
+    margin-right: 10px;
+}
+
+#newtask button {
+    padding: 10px 20px;
     border: none;
-    color: #ffffff;
+    border-radius: 5px;
+    background-color: #86A8E7;
+    color: white;
     cursor: pointer;
-    outline: none;
+    font-size: 15px;
 }
-#tasks{
+
+#tasks {
     display: none;
-    background-color: #ffffff;
-    padding: 30px 20px;
-    margin-top: 60px;
-    border-radius: 10px;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
-    width: 100%;
-    position: relative;
 }
-.task{
-    background-color: #ffffff;
+
+.task {
+    background-color: #FFFFFF;
     height: 50px;
     padding: 5px 10px;
     margin-top: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 2px solid #d1d3d4;
+    border-bottom: 2px solid #E0E0E0;
     cursor: pointer;
 }
-.task span{
-    font-family: 'Poppins',sans-serif;
+
+.task span {
+    font-family: 'Poppins', sans-serif;
     font-size: 15px;
     font-weight: 400;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-grow: 1;
+    margin-right: 10px;
 }
-.task button{
-    background-color: #8052ec;
-    color: #ffffff;
+
+.task .button-group {
+    display: flex;
+    gap: 10px;
+}
+
+.task button {
+    background-color: #86A8E7;
+    padding: 0.5em;
+    color: #FFFFFF;
     height: 100%;
     width: 40px;
     border-radius: 5px;
     border: none;
     cursor: pointer;
     outline: none;
+    transition: background-color 0.3s ease;
 }
-.completed{
+
+.task button:hover {
+    background-color: #577FCF; /* Darker version of the button color */
+}
+
+.completed {
     text-decoration: line-through;
+}
+
+/* Timer Styles */
+.stopWatch {
+    padding: 20px;
+    text-align: center;
+    margin: 5em;
+}
+
+#timerDisplay {
+    font-size: 2em;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 20px;
+    display: block;
+}
+
+#timerControls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#timerControls button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #86A8E7;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+#timerControls button:hover {
+    background-color: #577FCF; /* Darker version of the button color */
 }

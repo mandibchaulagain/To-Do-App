@@ -2,15 +2,12 @@
 <html lang="en">
 <head>
     <title>Simple To Do List</title>
-    <!--Google Font-->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
-    <!--Font Awesome CDN-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-    <!--Stylesheet-->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class = "Rcontainer">
+    <div class="Rcontainer">
         <div class="container">
             <div id="newtask">
                 <input type="text" placeholder="Task to be done..">
@@ -18,12 +15,17 @@
             </div>
             <div id="tasks"></div>
         </div>
-        <div class = "stopWatch">
-            <span>This is stopwatch</span>
+        <div class="stopWatch">
+            <span id="timerDisplay">
+                <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
+            </span>
+            <div id="timerControls">
+                <button id="startTimer" disabled>Start</button>
+                <button id="stopTimer" disabled>Stop</button>
+                <button id="resetTimer" disabled>Reset</button>
+            </div>
         </div>
-
     </div>
-    <!--Script-->
     <script src="script.js"></script>
 </body>
 </html>
